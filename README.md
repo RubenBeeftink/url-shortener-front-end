@@ -33,5 +33,7 @@ Install the dependencies:
 
 To run the project:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. 
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. 
 Make sure that the back-end is running on `http://localhost:8000`, or alter the `baseUrl` in `login.service.ts` and `short-url.service.ts` to the corresponding back-end url.
+
+- Run the back-end project according to the [readme](https://github.com/RubenBeeftink/url-shortener-back-end/blob/main/README.md) in the repository.
