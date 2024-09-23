@@ -38,7 +38,7 @@
               {{ shortUrl.short_url }}
             </a>
           </td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ shortUrl.expires_at | date }}</td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ shortUrl.expires_at ? (shortUrl.expires_at | date) : '-'}}</td>
           <td class="whitespace-nowrap py-2 text-right">
             <a
               href="short-url/detail/{{ shortUrl.id }}"
