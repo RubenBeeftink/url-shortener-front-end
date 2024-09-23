@@ -34,8 +34,15 @@ export class ShortUrlIndexPage implements OnInit {
   protected delete(shortUrl: ShortUrl): void {
     this.shortUrlService.delete(shortUrl)
       .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe(() => {
-        this.getShortUrls();
+      .subscribe({
+        next: () => {
+          this.getShortUrls();
+        },
+        error: (response) => {
+          window.alert('something went wrong fetching data. Error: ' + response.error.message);
+          localStorage.clear();
+          this.router.navigate(['login'])
+        }
       });
   }
 
@@ -49,6 +56,11 @@ export class ShortUrlIndexPage implements OnInit {
         },
         error: (response) => {
           window.alert('something went wrong fetching data. Error: ' + response.error.message);
+
+          if (response.error.message === 'Unauthenticated.') {
+            localStorage.clear();
+            this.router.navigate(['login'])
+          }
         },
       });
   }

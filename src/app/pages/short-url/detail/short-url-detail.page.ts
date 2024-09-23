@@ -72,6 +72,10 @@ export class ShortUrlDetailPage implements OnInit {
         },
         error: (response) => {
           window.alert('something went wrong fetching data. Error: ' + response.error.message);
+
+          if(response.error.message === 'Unauthenticated.') {
+            localStorage.clear();
+          }
         }
       });
   }
@@ -92,6 +96,11 @@ export class ShortUrlDetailPage implements OnInit {
         },
         error: (response) => {
           window.alert('something went wrong fetching data. Error: ' + response.error.message);
+
+          if(response.error.message === 'Unauthenticated.') {
+            localStorage.clear();
+            this.router.navigate(['login'])
+          }
         }
       });
   }
@@ -119,6 +128,11 @@ export class ShortUrlDetailPage implements OnInit {
         },
         error: (response) => {
           window.alert('something went wrong fetching data. Error: ' + response.error.message);
+
+          if(response.error.message === 'Unauthenticated.') {
+            localStorage.clear();
+            this.router.navigate(['login'])
+          }
         },
       })
   }
