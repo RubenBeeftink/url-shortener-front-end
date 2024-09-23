@@ -1,4 +1,5 @@
 # ShortenerFrontEnd
+This application aims to provide a front-end implementation for creating shortened urls. It builds upon the api provided in the back-end project. (https://github.com/RubenBeeftink/url-shortener-back-end)
 
 This project runs angular version 18.2.5. It is a basic web application. It provides the following functionality:
 - ability to register a user
@@ -22,7 +23,15 @@ All application logic is housed in the `src/app` folder.
 
 Each page has it's own html template and corresponding angular/ts javascript file.
 
-## Development server
+## Running the project
+Requirements:
+- node
+- npm
+
+Install the dependencies:
+- `npm install`
+
+To run the project:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. 
 Make sure that the back-end is running on `http://localhost:8000`, or alter the `baseUrl` in `login.service.ts` and `short-url.service.ts` to the corresponding back-end url.
