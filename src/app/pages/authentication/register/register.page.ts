@@ -45,7 +45,6 @@ export class RegisterPage implements OnInit {
   }
 
   protected register(): void {
-    console.log(this.form);
     this.isSubmitting = true;
     this.form!.markAllAsTouched();
 
