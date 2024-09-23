@@ -1,4 +1,6 @@
 # ShortenerFrontEnd
+This is an assessment project. I've timeboxed the front-end part of this project to approximately 4 hours.
+
 This application aims to provide a front-end implementation for creating shortened urls. It builds upon the api provided in the back-end project. (https://github.com/RubenBeeftink/url-shortener-back-end)
 
 This project runs angular version 18.2.5. It is a basic web application. It provides the following functionality:
